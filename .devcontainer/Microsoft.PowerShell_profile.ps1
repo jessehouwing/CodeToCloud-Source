@@ -1,4 +1,4 @@
-$workshopPath = Get-ChildItem -Path "/home/codespace/workspace/" -Include ".workshop" -Recurse -Directory -Hidden | select-object -ExpandProperty "FullName" { $_.FullName }
+$workshopPath = Get-ChildItem -Path "/workspaces/" -Include ".workshop" -Recurse -Directory -Hidden | select-object -ExpandProperty "FullName" { $_.FullName }
 $setupScript = join-path $workshopPath "setup.ps1"
 $workshopStepScript = join-path $workshopPath "workshop-step.ps1"
 
